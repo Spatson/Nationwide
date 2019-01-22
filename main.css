@@ -23,7 +23,11 @@ img{
 }
 .option-section-trailerLength{
     float: right;
+    columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
     width: 28%;
+    height: 450px;
     margin-right: 70px;
     margin-bottom: 25px;
     list-style-type: square;
@@ -80,7 +84,11 @@ img{
 }
 .quoteTotal{
     float: right;
-    width: 34%;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 28%;
+    background-color: white;
     margin-right: 70px;
     margin-bottom: 25px;
     list-style-type: square;
