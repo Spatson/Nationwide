@@ -96,3 +96,22 @@ img{
     border: 1px #ddd solid
 
 }
+.Notes{
+    float: right;
+    margin-right: 70px;
+    margin-bottom: 45px;
+    width: 34%;
+}
+.button {
+    float: right;
+    margin-right: 352px;
+    margin-bottom: 25px;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+  }

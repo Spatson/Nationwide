@@ -12,7 +12,7 @@
         <header id="masthead">
                 <div class="container-fullwidth">
                         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                                <a class="navbar-brand" href="">Nationwide&reg;</a>
+                                <a class="navbar-brand"><img src="img/logo.png" alt="logo"></a>
                                 
                               
                                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -628,6 +628,10 @@
                         </label>
                     </div>
                 </ul>
+                <div class="Notes">
+                        <h3>Additional Notes</h3>
+                        <textarea rows="4" cols="50">Offer good until mm/dd/yyyy</textarea>
+                </div>
 
                <ul class="option-section-other">
                    <h4>Other Options</h4>
@@ -856,9 +860,17 @@
                         </label>
                     </div>
                 </ul>
+                <!--<a href="printpage.html" class="button">Generate Quote</a>--->
+                <button id="btn">Quote</button>
                 <div class="quoteTotal">
-                        <h2> Total: &#36;
+                        <h2> Subtotal: &#36;
                                 <span id="finalTotal"></span>
+                            </h2>
+                </div>
+                <div class="Notes">
+                        <h2> 
+                            <h2>Notes</h2>
+                                <span id="selected"></span>
                             </h2>
                 </div>
                 
