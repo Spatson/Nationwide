@@ -2,7 +2,8 @@ $(document).ready(function(){
     $(this).scrollTop(0);
 });
 $( document ).ready(function(){
- $(".tx").click(function() {
+ 
+    $(".tx").click(function() {
     var total = 0;
     $(".tx:checked").each(function() { total += +this.value; });
     $("#subTotal").text(total);
@@ -58,12 +59,13 @@ function codespeedy(){
         $("#selected").append(idVal+ "<br>");
     });
     var print_div = document.getElementById("Title");
-
+    var image = document.getElementById("TrailerPic");
     var print_div3 = document.getElementById("Selections");
     var print_div4 = document.getElementById("AdditionalNotes");
     var print_div5 = document.getElementById("FinalTotal");
     var print_area = window.open();
     print_area.document.write(print_div.innerHTML);
+    print_area.document.write(image);
     print_area.document.write(print_div3.innerHTML);
     print_area.document.write(print_div4.innerHTML);
     print_area.document.write(print_div5.innerHTML);
