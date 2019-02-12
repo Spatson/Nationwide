@@ -435,7 +435,7 @@ $(document).ready(function () {
         perfoot6.value = perfoot6.value * 22;
     }else if(length4.checked && perfoot6.checked){
         perfoot6.value = 38.50;
-        perfoot6.value = perfoot6.value * 38.50;
+        perfoot6.value = perfoot6.value * 23;
     }else if(length5.checked && perfoot6.checked){
         perfoot6.value = 38.50;
         perfoot6.value = perfoot6.value * 24;
@@ -513,7 +513,7 @@ $(document).ready(function () {
     perfoot7.value = perfoot7.value * 22;
 }else if(length4.checked && perfoot7.checked){
     perfoot7.value = 10;
-    perfoot7.value = perfoot7.value * 10;
+    perfoot7.value = perfoot7.value * 23;
 }else if(length5.checked && perfoot7.checked){
     perfoot7.value = 10;
     perfoot7.value = perfoot7.value * 24;
