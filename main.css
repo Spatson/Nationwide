@@ -208,19 +208,42 @@ background: linear-gradient(#ffdd7f 5%, #ffbc00 100%);
     margin-bottom: 20px;
     width: 34%;
 }
-.TrailerPic{
+.image2{
     float: left;
+    margin-top: 120px;
 }
 .Surcharge{
     float: right;
+    margin-top: -10px;
+    margin-right: 50px;
+    margin-bottom: 5px;
+    width: 34%;
+}
+.PO{
+    float: right;
     margin-top: -100px;
+    margin-right: 30px;
+    margin-bottom: 0px;
+    width: 34%;
+    text-align: left;
+}
+.PO1{
+    float: right;
+    margin-top: -70px;
     margin-right: 50px;
     margin-bottom: 5px;
     width: 34%;
 }
 .Markup{
     float: right;
-    margin-top: -10px;
+    margin-top: 0px;
+    margin-right: 50px;
+    margin-bottom: 5px;
+    width: 34%;
+}
+.Tax{
+    float: right;
+    margin-top: 0px;
     margin-right: 50px;
     margin-bottom: 5px;
     width: 34%;

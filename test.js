@@ -2,38 +2,38 @@ $(document).ready(function () {
     $(this).scrollTop(0);
   });
   function perfoot(){
-    var perfoot1 = document.getElementById("[-BWPF] Blackwood Pro Full Deck");
-    var perfoot2 = document.getElementById("[9] Single Side Under Frame Tie Down Flat");
-    var perfoot3 = document.getElementById("[A] I-Beam Main Frame");
-    var perfoot4 = document.getElementById("[E] Rough Oak Floor");
-    var perfoot5 = document.getElementById("[K] 4” Ratchets every 4ft w/ Slide Track");
-    var perfoot6 = document.getElementById("[P] DP Stl Flr");
-    var perfoot7 = document.getElementById("[T] Torque Tube");
-    var length1 = document.getElementById("20'");
-    var length2 = document.getElementById("21'");
-    var length3 = document.getElementById("22'");
-    var length4 = document.getElementById("23'");
-    var length5 = document.getElementById("24'");
-    var length6 = document.getElementById("25'");
-    var length7 = document.getElementById("26'");
-    var length8 = document.getElementById("27'");
-    var length9 = document.getElementById("28'");
-    var length10 = document.getElementById("29'");
-    var length11 = document.getElementById("30'");
-    var length12 = document.getElementById("31'");
-    var length13 = document.getElementById("32'");
-    var length14 = document.getElementById("33'");
-    var length15 = document.getElementById("34'");
-    var length16 = document.getElementById("35'");
-    var length17 = document.getElementById("36'");
-    var length18 = document.getElementById("37'");
-    var length19 = document.getElementById("38'");
-    var length20 = document.getElementById("39'");
-    var length21 = document.getElementById("40'");
-    var length22 = document.getElementById("41'");
-    var length23 = document.getElementById("42'");
-    var length24 = document.getElementById("43'");
-    var length25 = document.getElementById("44'");
+    var perfoot1 = document.getElementById("[-BWPF]");
+    var perfoot2 = document.getElementById("[-9]");
+    var perfoot3 = document.getElementById("[-A]");
+    var perfoot4 = document.getElementById("[-E]");
+    var perfoot5 = document.getElementById("[-K]");
+    var perfoot6 = document.getElementById("[-P]");
+    var perfoot7 = document.getElementById("[-T]");
+    var length1 = document.getElementById("FD20'");
+    var length2 = document.getElementById("FD21'");
+    var length3 = document.getElementById("FD22'");
+    var length4 = document.getElementById("FD23'");
+    var length5 = document.getElementById("FD24'");
+    var length6 = document.getElementById("FD25'");
+    var length7 = document.getElementById("FD26'");
+    var length8 = document.getElementById("FD27'");
+    var length9 = document.getElementById("FD28'");
+    var length10 = document.getElementById("FD29'");
+    var length11 = document.getElementById("FD30'");
+    var length12 = document.getElementById("FD31'");
+    var length13 = document.getElementById("FD32'");
+    var length14 = document.getElementById("FD33'");
+    var length15 = document.getElementById("FD34'");
+    var length16 = document.getElementById("FD35'");
+    var length17 = document.getElementById("FD36'");
+    var length18 = document.getElementById("FD37'");
+    var length19 = document.getElementById("FD38'");
+    var length20 = document.getElementById("FD39'");
+    var length21 = document.getElementById("FD40'");
+    var length22 = document.getElementById("FD41'");
+    var length23 = document.getElementById("FD42'");
+    var length24 = document.getElementById("FD43'");
+    var length25 = document.getElementById("FD44'");
 
     //Blackwood * length
     if(length1.checked && perfoot1.checked){
@@ -618,6 +618,9 @@ $(document).ready(function () {
     $("#finaltotes").empty();
     var text = document.getElementById("AddNotes").value;
     document.getElementById("inputText").innerHTML = text;
+
+    var text1 = document.getElementById("PO#").value;
+    document.getElementById("inputText1").innerHTML = text1;
   
     var total = 0;
     $(".tx:checked").each(function () {
@@ -631,14 +634,18 @@ $(document).ready(function () {
     var markup = parseFloat(document.getElementById("Markup").value);
     markup = markup / 100;
     martotal = total * markup;
-    var FinalTotal = martotal + surtotal + total;
+    var taxtotal = 0;
+    var taxcharge = parseFloat(document.getElementById("Tax").value);
+    taxcharge = taxcharge / 100;
+    taxtotal = total * taxcharge;
+    var FinalTotal = martotal + surtotal + taxtotal + total;
     FinalTotal = FinalTotal.toFixed(2);
     $("#finaltotes").append(FinalTotal);
   
     $("#selected").empty();
     $(".tx:checked").each(function () {
       var idVal = $(this).attr("id");
-      $("#selected").append(idVal + "<br>");
+      $("#selected").append(idVal);
     });
     var print_div = document.getElementById("Title");
     var imageID = $("#TrailerPic").attr('src')
@@ -647,6 +654,7 @@ $(document).ready(function () {
     var image1 = `<img src="${StandFID}" alt="sf" width="550" height="250">`
     var print_div3 = document.getElementById("Selections");
     var print_div4 = document.getElementById("AdditionalNotes");
+    var print_div6 = document.getElementById("PurchaseOrder");
     var print_div5 = document.getElementById("FinalTotal");
     var pwa = window.open();
     pwa.document.write(print_div.innerHTML);
@@ -656,6 +664,9 @@ $(document).ready(function () {
     pwa.document.write(image1);
     pwa.document.write(print_div3.innerHTML);
     pwa.document.write(print_div4.innerHTML);
+    pwa.document.write(print_div6.innerHTML);
+    pwa.document.write( "Disclaimer Statement*");
+    pwa.document.write("<h3>Signature:________________________________________________________<h3>");
     pwa.document.write(print_div5.innerHTML);
     var printPreview = function () {
       pwa.print()
