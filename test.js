@@ -665,7 +665,7 @@ $(document).ready(function () {
     pwa.document.write(print_div3.innerHTML);
     pwa.document.write(print_div4.innerHTML);
     pwa.document.write(print_div6.innerHTML);
-    pwa.document.write( "Disclaimer Statement*");
+    pwa.document.write( "Disclosure Statement*");
     pwa.document.write("<h3>Signature:________________________________________________________<h3>");
     pwa.document.write(print_div5.innerHTML);
     var printPreview = function () {
